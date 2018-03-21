@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div id="demo"></div>
+    <script>
+
+        // basic #4
+
+        var triarea = function (side1, side2, side3) {
+            var p = (side1 + side2 + side3) / 2;
+            var a = Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
+            return a;
+        }
+        //fill in side lengths below
+        document.write(triarea(5, 7, 6));
+
+        //// basic #8
+
+       
+        var userResponse = prompt("Please enter your guessed number.");
+        var guessedNumber = Math.ceil(Math.random() * 10);
+
+
+        if (userResponse == guessedNumber) {
+            alert("Good Work!");
+        } else {
+            alert("Not Matched!");
+        }
+
+        // functions #2
+
+        var userResponse = prompt("Please enter a phrase or word.");
+        var palindrome = function (userResponse) {
+
+            var res = userResponse.split("").reverse().join("");
+
+            if (res == userResponse) {
+                alert("Palindrome");
+            }
+
+            else {
+                alert("Not a palindrome.");
+            }
+
+        }
+
+        console.log(palindrome(userResponse));
+
+        // functions #4
+
+        var userResponse = prompt("Please enter a word.");
+        var alphabet = function (userResponse) {
+
+            var alpha = userResponse.split("").sort().join("");
+
+            document.write(alpha);
+        }
+
+        console.log(alphabet(userResponse));
+
+        // arrays #3
+
+        var userResponse = prompt("How many elements from the array (10) do you want?");
+
+        var array = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+
+        var myFunction = function (userResponse) {
+
+            var numbers = array.slice(0, userResponse);
+
+            document.write(numbers);
+
+        }
+
+        console.log(myFunction(userResponse));
+
+
+        // conditionals #1
+
+        var userResponseOne = prompt("Enter an integer.");
+        var userResponseTwo = prompt("Enter a second integer.");
+
+        if (userResponseOne > userResponseTwo) {
+
+            alert(userResponseOne + " is greater than " + userResponseTwo);
+        }
+
+        else if (userResponseOne == userResponseTwo) {
+
+            alert(userResponseOne + " is equal to " + userResponseTwo);
+        }
+
+        else {
+            alert(userResponseOne + " is less than " + userResponseTwo);
+        }
+
+    </script>
+
+
+</body>
+</html>
